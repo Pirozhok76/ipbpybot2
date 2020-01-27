@@ -1,9 +1,11 @@
 import random
 import re
-import time
+import locale
+import datetime
 
 def parse(message):
     reply = ' '
+    locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
 
     if re.search('красота', message, re.IGNORECASE):
         reply = "Согласен, красивая картина."
@@ -15,10 +17,10 @@ def parse(message):
         ])
 
     elif re.search('^date|дата$', message, re.IGNORECASE):
-        reply = time.ctime(time.time())
+        reply = datetime.strftime(datetime.now(), "%d %B %Y")
 
     elif re.search('^time|время$', message, re.IGNORECASE):
-        reply = time.ctime(time.time())
+        reply = datetime.strftime(datetime.now(), "%H:%M:%S")
 
     elif re.search('Капитан|Кэп|Куп|Пирожок', message, re.IGNORECASE):
         reply = random.choice([
