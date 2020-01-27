@@ -1,7 +1,7 @@
 import random
 import re
 import locale
-import datetime
+from datetime import datetime
 
 def parse(message):
     reply = ' '
