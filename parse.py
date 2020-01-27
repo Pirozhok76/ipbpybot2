@@ -20,7 +20,7 @@ def parse(message):
     elif re.search('^time|время$', message, re.IGNORECASE):
         reply = time.ctime(time.time())
 
-    elif re.search('Капитан|Кэп,|Куп,|Пирожок', message, re.IGNORECASE):
+    elif re.search('Капитан|Кэп|Куп|Пирожок', message, re.IGNORECASE):
         reply = random.choice([
             "Тащи пирожки",
             "Готовьте лодку!",
@@ -54,7 +54,7 @@ def parse(message):
             "Здарова, коль не шутишь"
         ])
 
-    elif re.search('Бот,', message, re.IGNORECASE):
+    elif re.search('бот', message, re.IGNORECASE):
         reply = random.choice([
             "Сам ты бот, я человек",
             "Я сейчас закричу!",

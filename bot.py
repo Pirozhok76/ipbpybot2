@@ -15,7 +15,7 @@ def start(update, context):
 
 
 def help(update, context):
-    update.message.reply_text('Help!')
+    update.message.reply_text('Create an Issue if you want (https://github.com/nullawhale/ipbpybot2)')
 
 
 def echo(update, context):
