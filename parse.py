@@ -5,7 +5,7 @@ import datetime
 
 def parse(message):
     reply = ' '
-    locale.setlocale(locale.LC_ALL, 'en_EN.UTF-8')
+    locale.setlocale(locale.LC_ALL, 'en_US.utf8')
 
     if re.search('красота', message, re.IGNORECASE):
         reply = "Согласен, красивая картина."
