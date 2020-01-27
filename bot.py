@@ -1,6 +1,7 @@
 import os
 import logging
 
+from parse import parse
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 logging.basicConfig(
@@ -18,8 +19,8 @@ def help(update, context):
 
 
 def echo(update, context):
-    if update.message.text == 'Саша':
-        update.message.reply_text('Александр')
+    update.message.reply_text(parse(update.message.text))
+
 
 
 def error(update, context):
