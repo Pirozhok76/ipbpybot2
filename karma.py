@@ -6,8 +6,8 @@ def karma(message):
     user = message.reply_to_message.from_user
     username = 'doe'
     if user.username != '':
-        user = user.username
+        username = user.username
     else:
-        user = user.first_name + " " + user.last_name
+        username = user.first_name + " " + user.last_name
 
     return 'Поднял карму {} до {}!'.format(username, count)
