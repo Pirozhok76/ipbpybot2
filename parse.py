@@ -40,10 +40,19 @@ def parse(message):
             "Муксус-бамбуксус"
         ])
 
-    elif re.search('^(всем\s)?добр(ое|ого) утр[ао]', message, re.IGNORECASE):
+    elif re.search('^(добро[ге]?о? |всем |)утр[ао]( всем|)$', message, re.IGNORECASE):
         reply = random.choice([
             "И тебе доброго утра!",
-            "Добрейшего тебе предрассветного утра!"
+            "Добрейшего тебе предрассветного утра!",
+            "Какое утро?! Солнце уже высоко!"
+        ])
+
+    elif re.search('^(доброй |всем |спокойной |)(ночк?и|[сш]пать)( всем|)$', message, re.IGNORECASE):
+        reply = random.choice([
+            "Сладких снов!",
+            "Доброчи!",
+            "Нежной ночечки!",
+            "Крепко спатушки!"
         ])
 
     elif re.search('здаров|прив[ет]?]', message, re.IGNORECASE):
@@ -54,7 +63,7 @@ def parse(message):
             "Здарова, коль не шутишь"
         ])
 
-    elif re.search('бот', message, re.IGNORECASE):
+    elif re.search(' бот', message, re.IGNORECASE):
         reply = random.choice([
             "Сам ты бот, я человек",
             "Я сейчас закричу!",

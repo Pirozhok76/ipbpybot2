@@ -19,7 +19,10 @@ def help(update, context):
 
 
 def echo(update, context):
-    update.message.reply_text(parse(update.message.text))
+    if update.message.text == '++':
+        update.message.reply_text('Up karma to {}')
+    else:    
+        update.message.reply_text(parse(update.message.text))
 
 
 
