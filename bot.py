@@ -2,6 +2,7 @@ import os
 import logging
 
 from parse import parse
+from karma import karma
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
 logging.basicConfig(
@@ -19,8 +20,8 @@ def help(update, context):
 
 
 def echo(update, context):
-    if update.message.text == '++':
-        update.message.reply_text('Up karma to {}')
+    if update.message.text == '++' or update.message.text == '--':
+        update.message.reply_text(karma(update.message))
     else:    
         update.message.reply_text(parse(update.message.text))
 
