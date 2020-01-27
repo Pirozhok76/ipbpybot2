@@ -63,7 +63,7 @@ def parse(message):
             "Здарова, коль не шутишь"
         ])
 
-    elif re.search(' бот', message, re.IGNORECASE):
+    elif re.search('^бот| бот', message, re.IGNORECASE):
         reply = random.choice([
             "Сам ты бот, я человек",
             "Я сейчас закричу!",
