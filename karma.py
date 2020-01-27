@@ -10,4 +10,4 @@ def karma(message):
     else:
         user = user.first_name + " " + user.last_name
 
-    return 'Поднял карму {} до {}!'.format(useriname, count)
+    return 'Поднял карму {} до {}!'.format(username, count)
